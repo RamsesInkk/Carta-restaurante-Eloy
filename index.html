@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Restaurante Eloy</title>
-
     <style>
-
-        /* =========================
-           CONFIGURACIÓN GENERAL
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -28,587 +21,274 @@
             color: #333;
         }
 
-
-        /* =========================
-           PORTADA (IMAGEN GRANDE ELOY LOGO)
-        ========================= */
-
         header {
             min-height: 100vh;
-
             background-image:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.55),
-                    rgba(0, 0, 0, 0.55)
-                ),
-                url("Eloy logo.jpeg");
-
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("eloy-logo.jpeg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             text-align: center;
-
             padding: 40px 20px;
-
             color: white;
         }
-
-
-        /* TÍTULO Y TEXTO DE PORTADA */
 
         header h1 {
             font-size: 55px;
             margin-bottom: 15px;
-
-            text-shadow:
-                2px 2px 5px rgba(0, 0, 0, 0.6);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
-
 
         header p {
             font-size: 22px;
-
             margin-bottom: 35px;
         }
 
-
-        /* BOTÓN */
-
         .boton {
             display: inline-block;
-
             background: #d4a017;
-
             color: white;
-
             text-decoration: none;
-
             padding: 16px 35px;
-
             border-radius: 30px;
-
             font-size: 18px;
-
             font-weight: bold;
-
             transition: 0.3s;
-
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-
         .boton:hover {
             background: #b8860b;
-
             transform: translateY(-3px);
         }
-
-
-        /* =========================
-           CONTENEDOR
-        ========================= */
 
         main {
             width: 100%;
         }
 
-
         .contenedor {
             max-width: 1100px;
-
             margin: auto;
-
             padding: 70px 20px;
         }
-
-
-        /* =========================
-           SECCIONES
-        ========================= */
 
         section {
             margin-bottom: 90px;
         }
 
-
         h2 {
             text-align: center;
-
             color: #8b0000;
-
             font-size: 38px;
-
             margin-bottom: 30px;
         }
 
-
-        /* =========================
-           CONCEPTO (IMAGEN COMPLETA)
-        ========================= */
-
-        .concepto {
+        .concepto, .experiencia, .menu {
             text-align: center;
         }
 
-
-        .concepto img {
+        .concepto img, .experiencia img {
             width: 100%;
-
             height: auto;
-
             border-radius: 20px;
-
             display: block;
-
             margin: auto;
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
         }
 
-
-        .concepto p {
+        .concepto p, .experiencia p {
             max-width: 800px;
-
             margin: 30px auto 0;
-
             font-size: 19px;
-
             line-height: 1.7;
         }
-
-
-        /* =========================
-           EXPERIENCIA (IMAGEN COMPLETA)
-        ========================= */
-
-        .experiencia {
-            text-align: center;
-        }
-
-
-        .experiencia img {
-            width: 100%;
-
-            height: auto;
-
-            border-radius: 20px;
-
-            display: block;
-
-            margin: auto;
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.18);
-        }
-
-
-        .experiencia p {
-            max-width: 800px;
-
-            margin: 30px auto 0;
-
-            font-size: 19px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================
-           CARTA (IMÁGENES COMPLETAS Y SEPARADAS)
-        ========================= */
-
-        .menu {
-            text-align: center;
-        }
-
 
         .menu-introduccion {
             font-size: 18px;
-
             margin-bottom: 40px;
-
             color: #666;
         }
 
-
         .carta {
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 40px;
         }
 
-
         .tarjeta {
             background: white;
-
             border-radius: 20px;
-
             padding: 20px;
-
-            box-shadow:
-                0 6px 20px rgba(0, 0, 0, 0.15);
-
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             transition: 0.3s;
         }
 
-
         .tarjeta:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-
 
         .tarjeta img {
             width: 100%;
-
             height: auto;
-
             border-radius: 12px;
-
             display: block;
-
             margin-bottom: 15px;
         }
-
 
         .tarjeta-contenido {
             padding: 10px 0 0;
         }
 
-
         .tarjeta h3 {
             color: #8b0000;
-
             font-size: 22px;
-
             margin-bottom: 8px;
         }
 
-
         .tarjeta p {
             color: #666;
-
             font-size: 15px;
         }
 
-
-        /* =========================
-           PIE DE PÁGINA
-        ========================= */
-
         footer {
             background: #252525;
-
             color: white;
-
             text-align: center;
-
             padding: 40px 20px;
         }
 
-
         footer h3 {
             font-size: 24px;
-
             margin-bottom: 15px;
         }
 
-
         footer p {
             margin: 8px 0;
-
             color: #ddd;
         }
 
-
-        /* =========================
-           OPTIMIZACIÓN PARA CELULARES
-        ========================= */
-
         @media (max-width: 768px) {
-
             header {
                 min-height: 80vh;
                 padding: 40px 15px;
             }
 
-
             header h1 {
                 font-size: 34px;
             }
-
 
             header p {
                 font-size: 17px;
             }
 
-
             .boton {
                 padding: 14px 28px;
-
                 font-size: 16px;
             }
-
 
             .contenedor {
                 padding: 40px 15px;
             }
 
-
             section {
                 margin-bottom: 60px;
             }
-
 
             h2 {
                 font-size: 28px;
             }
 
-
-            .concepto p,
-            .experiencia p {
+            .concepto p, .experiencia p {
                 font-size: 16px;
                 margin-top: 20px;
             }
-
 
             .carta {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
 
-
             .tarjeta {
                 padding: 15px;
             }
-
         }
-
     </style>
 </head>
-
-
 <body>
 
-
     <header>
-
-        <h1>
-            Restaurante Eloy
-        </h1>
-
-        <p>
-            Una experiencia gastronómica inolvidable
-        </p>
-
-        <a
-            class="boton"
-            href="#carta"
-        >
-            Ver nuestra carta
-        </a>
-
+        <h1>Restaurante Eloy</h1>
+        <p>Una experiencia gastronómica inolvidable</p>
+        <a class="boton" href="#carta">Ver nuestra carta</a>
     </header>
 
-
-
     <main>
-
         <div class="contenedor">
-
-
             <section class="concepto">
-
-                <h2>
-                    Nuestro concepto
-                </h2>
-
-                <img
-                    src="concepto.jpeg"
-                    alt="Concepto del Restaurante Eloy"
-                >
-
-                <p>
-                    En el Restaurante Eloy combinamos tradición,
-                    calidad y creatividad para ofrecer una experiencia
-                    gastronómica única.
-                </p>
-
+                <h2>Nuestro concepto</h2>
+                <img src="concepto.jpeg" alt="Concepto del Restaurante Eloy">
+                <p>En el Restaurante Eloy combinamos tradición, calidad y creatividad para ofrecer una experiencia gastronómica única.</p>
             </section>
-
-
 
             <section class="experiencia">
-
-                <h2>
-                    Vive la experiencia Eloy
-                </h2>
-
-                <img
-                    src="experencia.jpeg"
-                    alt="Experiencia del Restaurante Eloy"
-                >
-
-                <p>
-                    Disfruta de un ambiente agradable y de platillos
-                    preparados con pasión, calidad y dedicación.
-                </p>
-
+                <h2>Vive la experiencia Eloy</h2>
+                <img src="experiencia.jpeg" alt="Experiencia del Restaurante Eloy">
+                <p>Disfruta de un ambiente agradable y de platillos preparados con pasión, calidad y dedicación.</p>
             </section>
 
-
-
-            <section
-                class="menu"
-                id="carta"
-            >
-
-                <h2>
-                    Nuestra carta
-                </h2>
-
-                <p class="menu-introduccion">
-                    Descubre nuestras opciones y disfruta
-                    del sabor de Restaurante Eloy.
-                </p>
-
+            <section class="menu" id="carta">
+                <h2>Nuestra carta</h2>
+                <p class="menu-introduccion">Descubre nuestras opciones y disfruta del sabor de Restaurante Eloy.</p>
 
                 <div class="carta">
-
-
                     <div class="tarjeta">
-
-                        <img
-                            src="carta 1.jpeg"
-                            alt="Carta del Restaurante Eloy"
-                        >
-
+                        <img src="carta1.jpeg" alt="Carta del Restaurante Eloy">
                         <div class="tarjeta-contenido">
-
-                            <h3>
-                                Nuestra carta
-                            </h3>
-
-                            <p>
-                                Conoce nuestras especialidades.
-                            </p>
-
+                            <h3>Nuestra carta</h3>
+                            <p>Conoce nuestras especialidades.</p>
                         </div>
-
                     </div>
 
-
-
                     <div class="tarjeta">
-
-                        <img
-                            src="carta 2.jpeg"
-                            alt="Carta del Restaurante Eloy"
-                        >
-
+                        <img src="carta2.jpeg" alt="Carta del Restaurante Eloy">
                         <div class="tarjeta-contenido">
-
-                            <h3>
-                                Especialidades
-                            </h3>
-
-                            <p>
-                                Una selección de nuestros platillos.
-                            </p>
-
+                            <h3>Especialidades</h3>
+                            <p>Una selección de nuestros platillos.</p>
                         </div>
-
                     </div>
 
-
-
                     <div class="tarjeta">
-
-                        <img
-                            src="carta3.jpeg"
-                            alt="Carta del Restaurante Eloy"
-                        >
-
+                        <img src="carta3.jpeg" alt="Carta del Restaurante Eloy">
                         <div class="tarjeta-contenido">
-
-                            <h3>
-                                Más opciones
-                            </h3>
-
-                            <p>
-                                Descubre más sabores de nuestra carta.
-                            </p>
-
+                            <h3>Más opciones</h3>
+                            <p>Descubre más sabores de nuestra carta.</p>
                         </div>
-
                     </div>
 
-
-
                     <div class="tarjeta">
-
-                        <img
-                            src="carta 4.jpeg"
-                            alt="Carta del Restaurante Eloy"
-                        >
-
+                        <img src="carta4.jpeg" alt="Carta del Restaurante Eloy">
                         <div class="tarjeta-contenido">
-
-                            <h3>
-                                Recomendaciones
-                            </h3>
-
-                            <p>
-                                Disfruta de nuestras propuestas.
-                            </p>
-
+                            <h3>Recomendaciones</h3>
+                            <p>Disfruta de nuestras propuestas.</p>
                         </div>
-
                     </div>
-
-
                 </div>
-
             </section>
-
-
         </div>
-
     </main>
 
-
-
     <footer>
-
-        <h3>
-            Restaurante Eloy
-        </h3>
-
-        <p>
-            Teléfono: 5613216968
-        </p>
-
-        <p>
-            Instagram: @eloycantina
-        </p>
-
-        <p>
-            © 2026 Restaurante Eloy
-        </p>
-
+        <h3>Restaurante Eloy</h3>
+        <p>Teléfono: 5613216968</p>
+        <p>Instagram: @eloycantina</p>
+        <p>© 2026 Restaurante Eloy</p>
     </footer>
-
 
 </body>
 </html>
