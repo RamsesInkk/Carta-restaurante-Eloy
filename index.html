@@ -21,14 +21,14 @@
             color: #333;
         }
 
-        /* PORTADA ADAPTABLE */
+        /* PORTADA */
         header {
             min-height: 100vh;
-            background-color: #121212; /* Fondo oscuro elegante */
+            background-color: #121212;
             background-image:
                 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url("Eloylogo.jpeg");
-            background-size: contain; /* Muestra la imagen completa sin recortar */
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
@@ -128,12 +128,6 @@
             border-radius: 20px;
             padding: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            transition: 0.3s;
-        }
-
-        .tarjeta:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .tarjeta img {
@@ -142,10 +136,6 @@
             border-radius: 12px;
             display: block;
             margin-bottom: 15px;
-        }
-
-        .tarjeta-contenido {
-            padding: 10px 0 0;
         }
 
         .tarjeta h3 {
@@ -176,11 +166,10 @@
             color: #ddd;
         }
 
-        /* AJUSTES ESPECÍFICOS PARA CELULAR */
         @media (max-width: 768px) {
             header {
-                min-height: 65vh; /* Reduce altura para no dejar espacios gigantes */
-                background-size: contain; /* En celular el logo encaja 100% visible */
+                min-height: 60vh;
+                background-size: contain;
                 padding: 30px 15px;
             }
 
@@ -237,14 +226,12 @@
         <div class="contenedor">
             <section class="concepto">
                 <h2>Nuestro concepto</h2>
-                <img src="concepto.jpeg" alt="Concepto del Restaurante Eloy">
-                <p>En el Restaurante Eloy combinamos tradición, calidad y creatividad para ofrecer una experiencia gastronómica única.</p>
+                <img src="concepto.jpeg" alt="Concepto del Restaurante Eloy" loading="lazy">
             </section>
 
             <section class="experiencia">
                 <h2>Vive la experiencia Eloy</h2>
-                <img src="experencia.jpeg" alt="Experiencia del Restaurante Eloy">
-                <p>Disfruta de un ambiente agradable y de platillos preparados con pasión, calidad y dedicación.</p>
+                <img src="experencia.jpeg" alt="Experiencia del Restaurante Eloy" loading="lazy">
             </section>
 
             <section class="menu" id="carta">
@@ -253,7 +240,7 @@
 
                 <div class="carta">
                     <div class="tarjeta">
-                        <img src="carta1.jpeg" alt="Carta del Restaurante Eloy">
+                        <img src="carta1.jpeg" alt="Carta 1" loading="lazy">
                         <div class="tarjeta-contenido">
                             <h3>Nuestra carta</h3>
                             <p>Conoce nuestras especialidades.</p>
@@ -261,7 +248,7 @@
                     </div>
 
                     <div class="tarjeta">
-                        <img src="carta2.jpeg" alt="Carta del Restaurante Eloy">
+                        <img src="carta2.jpeg" alt="Carta 2" loading="lazy">
                         <div class="tarjeta-contenido">
                             <h3>Especialidades</h3>
                             <p>Una selección de nuestros platillos.</p>
@@ -269,7 +256,7 @@
                     </div>
 
                     <div class="tarjeta">
-                        <img src="carta3.jpeg" alt="Carta del Restaurante Eloy">
+                        <img src="carta3.jpeg" alt="Carta 3" loading="lazy">
                         <div class="tarjeta-contenido">
                             <h3>Más opciones</h3>
                             <p>Descubre más sabores de nuestra carta.</p>
@@ -277,7 +264,7 @@
                     </div>
 
                     <div class="tarjeta">
-                        <img src="carta4.jpeg" alt="Carta del Restaurante Eloy">
+                        <img src="carta4.jpeg" alt="Carta 4" loading="lazy">
                         <div class="tarjeta-contenido">
                             <h3>Recomendaciones</h3>
                             <p>Disfruta de nuestras propuestas.</p>
